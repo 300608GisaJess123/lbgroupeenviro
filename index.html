@@ -1,36 +1,245 @@
-
 <!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LB Group – Gestion des déchets | Bangui, RCA</title>
-  <meta name="description" content="LB Group – Gestion des déchets : identification, collecte, recyclage, conseil environnemental, ESG & durabilité, formation & assistance technique (Bangui, RCA)." />
+  <title>LB Group Enviro | Gestion des déchets & ESG | Bangui, RCA</title>
+  <meta name="description" content="LB Group Enviro à Bangui (RCA) : identification, collecte, recyclage, consulting environnemental, conseil ESG/durabilité, formation & assistance technique." />
+  <style>
+    :root{
+      --bg:#071018; --card:#0b1724; --muted:#a7b5c5; --text:#f4f7fb;
+      --line:rgba(255,255,255,.10); --accent:#7bd389; --accent2:#4dd2ff;
+      --shadow:0 12px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 700px at 20% 0%, rgba(77,210,255,.10), transparent 60%),
+                  radial-gradient(1000px 600px at 80% 10%, rgba(123,211,137,.12), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 16px 60px;}
+    .topbar{
+      display:flex; justify-content:space-between; align-items:center; gap:12px;
+      position:sticky; top:0; z-index:5;
+      padding:12px 10px; margin:-6px -6px 18px;
+      background:rgba(7,16,24,.70); backdrop-filter: blur(10px);
+      border:1px solid var(--line); border-radius:14px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700;}
+    .logo{
+      width:34px; height:34px; border-radius:10px;
+      background:linear-gradient(135deg, rgba(123,211,137,.95), rgba(77,210,255,.75));
+      box-shadow:0 10px 20px rgba(0,0,0,.25);
+    }
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 10px; border-radius:999px;
+      background:rgba(255,255,255,.06); border:1px solid var(--line);
+      color:var(--muted); font-size:13px;
+    }
+    .lang{
+      display:flex; gap:8px; align-items:center;
+    }
+    .btn{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      padding:9px 12px; border-radius:999px;
+      font-weight:600; font-size:13px;
+    }
+    .btn.primary{
+      background:linear-gradient(135deg, rgba(123,211,137,.95), rgba(77,210,255,.75));
+      border-color:transparent; color:#051018;
+    }
+    .hero{display:grid; gap:14px; margin-top:16px;}
+    .h1{font-size:38px; line-height:1.1; margin:4px 0 0;}
+    .sub{color:var(--muted); font-size:16px; margin:6px 0 0;}
+    .cta{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;}
+    .grid{display:grid; grid-template-columns:1fr; gap:14px; margin-top:18px;}
+    @media(min-width:820px){ .grid{grid-template-columns:1.15fr .85fr;} .h1{font-size:44px;} }
+    .card{
+      background:rgba(11,23,36,.82);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+    }
+    h2{margin:0 0 10px; font-size:18px;}
+    .muted{color:var(--muted)}
+    .list{margin:10px 0 0; padding-left:18px;}
+    .list li{margin:8px 0;}
+    .kpi{display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-top:12px;}
+    .mini{
+      padding:10px; border-radius:14px;
+      background:rgba(255,255,255,.05); border:1px solid var(--line);
+      font-size:13px; color:var(--muted);
+    }
+    .mini b{display:block; color:var(--text); font-size:14px; margin-bottom:2px;}
+    .contact{
+      display:grid; gap:10px;
+    }
+    .contact a{
+      text-decoration:none;
+    }
+    .footer{
+      margin-top:22px; padding-top:16px; border-top:1px solid var(--line);
+      color:var(--muted); font-size:13px;
+      display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px; border-radius:12px;
+      background:rgba(255,255,255,.05); border:1px solid var(--line);
+      color:var(--muted); font-size:13px;
+    }
+    .ok{color:var(--accent); font-weight:700}
+    /* Hide EN by default */
+    [data-lang="en"]{display:none;}
+  </style>
 </head>
-<body style="font-family:Arial, sans-serif; background:#0b1220; color:#ffffff; padding:40px">
 
-  <h1>LB Group – Gestion des déchets</h1>
-  <p><b>Bangui, République Centrafricaine</b></p>
+<body>
+  <div class="wrap">
 
-  <h2>Nos activités</h2>
-  <ul>
-    <li>Identification des déchets</li>
-    <li>Collecte et organisation logistique</li>
-    <li>Recyclage et valorisation</li>
-    <li>Environmental consulting</li>
-    <li>ESG / Sustainability advisory</li>
-    <li>Training & technical assistance</li>
-  </ul>
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          LB Group Enviro
+          <div class="chip">Bangui, République Centrafricaine</div>
+        </div>
+      </div>
 
-  <h2>Contact</h2>
-  <p>
-    WhatsApp / Téléphone :
-    <a href="https://wa.me/23674374083" style="color:#7bd389">+236 74 37 40 83</a>
-  </p>
+      <div class="lang">
+        <button class="btn primary" id="btnFR" type="button">FR</button>
+        <button class="btn" id="btnEN" type="button">EN</button>
+      </div>
+    </div>
 
-  <p style="margin-top:40px">
-    © 2026 — LB Group – Gestion des déchets
-  </p>
+    <!-- HERO -->
+    <section class="hero" data-lang="fr">
+      <div class="badge"><span class="ok">●</span> Services environnement & durabilité — disponibilité sur Bangui et environs</div>
+      <h1 class="h1">Gestion des déchets, recyclage & conseil ESG</h1>
+      <p class="sub">
+        LB Group Enviro accompagne les entreprises, ONG et institutions pour améliorer la
+        collecte, la valorisation des déchets, la conformité environnementale, et les performances ESG / durabilité.
+      </p>
 
-</body>
-</html>
+      <div class="cta">
+        <a class="btn primary" href="https://wa.me/23674374083">WhatsApp : +236 74 37 40 83</a>
+        <a class="btn" href="#services">Voir nos services</a>
+        <a class="btn" href="#contact">Nous contacter</a>
+      </div>
+    </section>
+
+    <section class="hero" data-lang="en">
+      <div class="badge"><span class="ok">●</span> Environmental & sustainability services — Bangui and surrounding areas</div>
+      <h1 class="h1">Waste management, recycling & ESG advisory</h1>
+      <p class="sub">
+        LB Group Enviro supports companies, NGOs and institutions to improve waste collection,
+        recycling/value recovery, environmental compliance, and ESG/sustainability performance.
+      </p>
+
+      <div class="cta">
+        <a class="btn primary" href="https://wa.me/23674374083">WhatsApp: +236 74 37 40 83</a>
+        <a class="btn" href="#services">View services</a>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+    </section>
+
+    <!-- CONTENT GRID -->
+    <div class="grid">
+
+      <!-- Services -->
+      <section class="card" id="services">
+        <h2 data-lang="fr">Nos services</h2>
+        <h2 data-lang="en">Our services</h2>
+
+        <p class="muted" data-lang="fr">
+          Une offre simple, opérationnelle et conforme aux exigences des partenaires (ONG, bailleurs, entreprises).
+        </p>
+        <p class="muted" data-lang="en">
+          Practical, field-ready services aligned with partner expectations (NGOs, donors, companies).
+        </p>
+
+        <ul class="list" data-lang="fr">
+          <li><b>Identification & cartographie</b> des déchets (points, volumes, types)</li>
+          <li><b>Collecte & organisation logistique</b> (circuit, fréquence, tri)</li>
+          <li><b>Recyclage & valorisation</b> (solutions adaptées, filières locales)</li>
+          <li><b>Consulting environnemental</b> (conformité, procédures, plans)</li>
+          <li><b>ESG / Sustainability advisory</b> (diagnostic, indicateurs, reporting)</li>
+          <li><b>Formation & assistance technique</b> (équipes, sensibilisation, HSE)</li>
+        </ul>
+
+        <ul class="list" data-lang="en">
+          <li><b>Waste identification & mapping</b> (points, volumes, types)</li>
+          <li><b>Collection & logistics planning</b> (routes, frequency, sorting)</li>
+          <li><b>Recycling & value recovery</b> (fit-for-purpose solutions)</li>
+          <li><b>Environmental consulting</b> (compliance, procedures, plans)</li>
+          <li><b>ESG / Sustainability advisory</b> (baseline, KPIs, reporting)</li>
+          <li><b>Training & technical assistance</b> (teams, awareness, HSE)</li>
+        </ul>
+
+        <div class="kpi">
+          <div class="mini" data-lang="fr"><b>Approche</b> Terrain + reporting</div>
+          <div class="mini" data-lang="fr"><b>Clients</b> ONG • Entreprises • Institutions</div>
+          <div class="mini" data-lang="fr"><b>Zone</b> Bangui & environs</div>
+
+          <div class="mini" data-lang="en"><b>Approach</b> Field + reporting</div>
+          <div class="mini" data-lang="en"><b>Clients</b> NGOs • Companies • Institutions</div>
+          <div class="mini" data-lang="en"><b>Area</b> Bangui & surroundings</div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <aside class="card" id="contact">
+        <h2 data-lang="fr">Contact</h2>
+        <h2 data-lang="en">Contact</h2>
+
+        <div class="contact">
+          <div class="badge" data-lang="fr">
+            <span class="ok">✔</span> Réponse rapide WhatsApp / Téléphone
+          </div>
+          <div class="badge" data-lang="en">
+            <span class="ok">✔</span> Fast reply via WhatsApp / phone
+          </div>
+
+          <a class="btn primary" href="https://wa.me/23674374083">+236 74 37 40 83</a>
+
+          <a class="btn" href="mailto:contact@lbgroupeenviro.com" data-lang="fr">
+            Email (optionnel) : contact@lbgroupeenviro.com
+          </a>
+          <a class="btn" href="mailto:contact@lbgroupeenviro.com" data-lang="en">
+            Email (optional): contact@lbgroupeenviro.com
+          </a>
+
+          <p class="muted" data-lang="fr" style="margin:0;">
+            *L’email est affiché à titre pro. Si tu veux, on peut le remplacer par ton vrai email.
+          </p>
+          <p class="muted" data-lang="en" style="margin:0;">
+            *Email shown for a professional look. We can replace it with your real email anytime.
+          </p>
+        </div>
+
+        <div class="footer">
+          <div>© <span id="year"></span> — LB Group Enviro</div>
+          <div data-lang="fr">Bangui, RCA • Déchets • Recyclage • ESG</div>
+          <div data-lang="en">Bangui, CAR • Waste • Recycling • ESG</div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // language toggle
+    const
